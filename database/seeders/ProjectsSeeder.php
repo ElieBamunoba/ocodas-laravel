@@ -3,54 +3,166 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class ProjectsSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
+        $faker = Faker::create();
         $projects = [
+
             [
-                'image' => 'assets/img/portfolio/iseav1.png',
-                'categories' => ['app'],
-                'title' => 'ISEAV ARU',
-                'link' => 'https://iseav-aru.org',
-                'description' => 'Website'
+                "image" => "images/portfolio/01.jpg",
+                "categories" => ["Painting", "Plumbing"],
+                "title" => "Plumbing, New York",
+                "link" => "portfolio-style-1.html"
             ],
             [
-                'image' => 'assets/img/portfolio/camera.jpg',
-                'categories' => ['web'],
-                'title' => 'Installation des caméras de surveillance',
-                'link' => '#',
-                'description' => 'Clinique Karibuni, Super Marché Manager Business, Station-service'
+                "image" => "images/portfolio/02.jpg",
+                "categories" => ["Tiles repair, Austin"],
+                "title" => "Home Maintenance",
+                "link" => "portfolio-style-2.html"
             ],
             [
-                'image' => 'assets/img/portfolio/gna1.png',
-                'categories' => ['app'],
-                'title' => 'Good News Africa Sarlu Construction',
-                'link' => 'https://goodnewsafricardc.com/',
-                'description' => 'Website'
+                "image" => "images/portfolio/03.jpg",
+                "categories" => ["Flooring", "Plumbing"],
+                "title" => "Floor Flooring, Bunnell",
+                "link" => "portfolio-style-3.html"
             ],
             [
-                'image' => 'assets/img/portfolio/conference.jpg',
-                'categories' => ['card'],
-                'title' => 'Formation sur la conception et déploiement du réseau local Edition 1',
-                'link' => '#',
-                'description' => 'Developpement'
+                "image" => "images/portfolio/04.jpg",
+                "categories" => ["Flooring", "Home Maintenance"],
+                "title" => "Drywall Insulation, Captown",
+                "link" => "portfolio-style-1.html"
             ],
             [
-                'image' => 'assets/img/portfolio/network.jpg',
-                'categories' => ['web'],
-                'title' => 'Fourniture de la connexion internet',
-                'link' => '#',
-                'description' => 'Monusco Banrdb, ISTM Nyakunde, ...'
+                "image" => "images/portfolio/05.jpg",
+                "categories" => ["Electrical", "Painting"],
+                "title" => "Electrical wiring, San Jose",
+                "link" => "portfolio-style-2.html"
+            ],
+            [
+                "image" => "images/portfolio/06.jpg",
+                "categories" => ["Electrical", "Home Maintenance"],
+                "title" => "Fireplace cleaning, Portland",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/07.jpg",
+                "categories" => ["Electrical", "Roofing"],
+                "title" => "Roofing, Berlin",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/08.jpg",
+                "categories" => ["Heating", "Plumbing"],
+                "title" => "Heating system tune-up, Manham",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/09.jpg",
+                "categories" => ["Heating", "Roofing"],
+                "title" => "Sealing driveways, New York",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/01.jpg",
+                "categories" => ["Painting", "Plumbing"],
+                "title" => "Plumbing, New York",
+                "link" => "portfolio-style-1.html"
+            ],
+            [
+                "image" => "images/portfolio/05.jpg",
+                "categories" => ["Electrical", "Painting"],
+                "title" => "Electrical wiring, San Jose",
+                "link" => "portfolio-style-2.html"
+            ],
+            [
+                "image" => "images/portfolio/01.jpg",
+                "categories" => ["Painting", "Plumbing"],
+                "title" => "Plumbing, New York",
+                "link" => "portfolio-style-1.html"
+            ],
+            [
+                "image" => "images/portfolio/03.jpg",
+                "categories" => ["Flooring", "Plumbing"],
+                "title" => "Floor Flooring, Bunnell",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/08.jpg",
+                "categories" => ["Heating", "Plumbing"],
+                "title" => "Heating system tune-up, Manham",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/02.jpg",
+                "categories" => ["Tiles repair, Austin"],
+                "title" => "Home Maintenance",
+                "link" => "portfolio-style-2.html"
+            ],
+            [
+                "image" => "images/portfolio/04.jpg",
+                "categories" => ["Flooring", "Home Maintenance"],
+                "title" => "Drywall Insulation, Captown",
+                "link" => "portfolio-style-1.html"
+            ],
+            [
+                "image" => "images/portfolio/06.jpg",
+                "categories" => ["Electrical", "Home Maintenance"],
+                "title" => "Fireplace cleaning, Portland",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/03.jpg",
+                "categories" => ["Flooring", "Plumbing"],
+                "title" => "Floor Flooring, Bunnell",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/04.jpg",
+                "categories" => ["Flooring", "Home Maintenance"],
+                "title" => "Drywall Insulation, Captown",
+                "link" => "portfolio-style-1.html"
+            ],
+            [
+                "image" => "images/portfolio/05.jpg",
+                "categories" => ["Electrical", "Painting"],
+                "title" => "Electrical wiring, San Jose",
+                "link" => "portfolio-style-2.html"
+            ],
+            [
+                "image" => "images/portfolio/06.jpg",
+                "categories" => ["Electrical", "Home Maintenance"],
+                "title" => "Fireplace cleaning, Portland",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/07.jpg",
+                "categories" => ["Electrical", "Roofing"],
+                "title" => "Roofing, Berlin",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/08.jpg",
+                "categories" => ["Heating", "Plumbing"],
+                "title" => "Heating system tune-up, Manham",
+                "link" => "portfolio-style-3.html"
+            ],
+            [
+                "image" => "images/portfolio/09.jpg",
+                "categories" => ["Heating", "Roofing"],
+                "title" => "Sealing driveways, New York",
+                "link" => "portfolio-style-3.html"
             ]
         ];
 
         foreach ($projects as $project) {
+            $project['description'] = $faker->paragraph();
+            $project['additional_images'] = [];
             Project::create($project);
         }
     }
