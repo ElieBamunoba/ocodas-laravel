@@ -11,10 +11,17 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\UserController;
 
+// Group routes with optional locale
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about-us', [HomeController::class, 'about'])->name('about-us');
 
+Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/our-projects', [HomeController::class, 'projects'])->name('projects');
+Route::get('/our-products', [HomeController::class, 'products'])->name('products');
+Route::get('/services/{slug}', [HomeController::class, 'service'])->name('services.show');
 
 // Language switcher route
 Route::get('language/{locale}', function ($locale) {
@@ -36,9 +43,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::name('admin.')->prefix('admin')->group(function () {
+        Route::resource('services', ServiceController::class);
         Route::resource('projects', ProjectController::class);
         Route::resource('slides', SlideController::class);
         Route::resource('users', UserController::class);
+        Route::resource('products', ProductController::class);
     });
 });
 
